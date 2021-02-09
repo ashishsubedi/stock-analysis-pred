@@ -70,6 +70,7 @@ def plot_MACD_signal(macd,signal,df=df,use_plotly=True,period_text='(12,26,9)'):
             yaxis_title='MACD Value',
            
         )
+        fig.add_trace(go.Scatter(x=df.index,y=np.zeros_like(signal),name='Zero Line',line=dict(color="black"), opacity=0.7))
         
 
         fig.show()
